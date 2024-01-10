@@ -8,23 +8,26 @@ body {
   background-image: url(./assets/cherry-blossom-wallpaper-3554x1999_53.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: white;
 }
 #container {
-  width: 356;
   display: flex;
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(2.2px);
-  width: 450px;
+  width: 100%; /* Ajuste a largura para 100% */
+  height: auto;
   text-align: center;
-  margin: auto;
+  margin: center;
   padding: 100px;
 }
 #container img {
+  max-width: 100%;
+  max-height: 100%;
   align-items: center;
   margin: auto;
 }
@@ -94,4 +97,7 @@ ul li a:hover {
     0.5
   );
   border: 1.5px solid white;
+}
+@media (min-width: 700px) {
+  --bg-url: url(/cherry-blossom-wallpaper-3554x1999_53.jpg);
 }
